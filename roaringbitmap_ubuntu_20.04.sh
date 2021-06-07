@@ -1,8 +1,8 @@
 # ----------------------------------------------------------------------------
 #
-# Package           : Royale-compiler
-# Version           : 0.9.8-rc2
-# Source repo       : https://github.com/apache/royale-compiler
+# Package           : RoaringBitmap
+# Version           : 0.9.10
+# Source repo       : https://github.com/RoaringBitmap/RoaringBitmap
 # Tested on         : ubuntu_20.04
 # Script License    : Apache License, Version 2 or later
 # Maintainer        : Santosh Kulkarni <santoshkulkarni70@gmail.com> / Priya Seth<sethp@us.ibm.com>
@@ -17,10 +17,10 @@
 #!/bin/bash
 
 
-export REPO=https://github.com/apache/royale-compiler
+export REPO=https://github.com/RoaringBitmap/RoaringBitmap
 
 if [ -z "$1" ]; then
-  export VERSION="org.apache.royale.compiler-0.9.8-rc2"
+  export VERSION="0.9.10"
 else
   export VERSION="$1"
 fi
@@ -31,14 +31,14 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-ppc64el/
 sudo apt install  -y maven
 mvn -version
 
-if [ -d "royale-compiler" ] ; then
-  rm -rf royale-compiler
+if [ -d "RoaringBitmap" ] ; then
+  rm -rf RoaringBitmap
 fi
 
 git clone ${REPO}
 
-## Build and test royal-compiler
-cd royale-compiler
+## Build and test RoaringBitmap
+cd 
 git checkout ${VERSION}
 ret=$?
 
